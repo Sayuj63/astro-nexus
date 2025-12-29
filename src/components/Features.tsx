@@ -4,11 +4,8 @@ import React from 'react';
 import { ZoomParallax } from '@/components/ui/zoom-parallax';
 
 const Features = () => {
-  // Lenis initialization moved back to global scope in page.tsx
-
-
-  // Cosmic-themed images for the parallax effect
-  const cosmicImages = [
+  // Minimalist black and white images for the parallax effect
+  const images = [
     {
       src: 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
       alt: 'Earth from space - AI Astrologer',
@@ -40,61 +37,58 @@ const Features = () => {
   ];
 
   return (
-    <section className="bg-deep-space text-white">
-      {/* Features Introduction */}
-      <div className="relative flex h-[50vh] items-center justify-center">
-        {/* Radial spotlight effect */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-1/2 left-1/2 h-[120vmin] w-[120vmin] -translate-x-1/2 rounded-full bg-gradient-to-r from-electric-purple/10 via-transparent to-transparent blur-[30px]"
-        />
-
-        <div className="text-center space-y-6 z-10 relative">
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-electric-purple via-magenta-pink to-neon-blue bg-clip-text text-transparent">
-            Explore Our Features
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover the cosmic powers that await you in the ASTRONEXUS universe
-          </p>
-        </div>
-      </div>
-
+    <section className="bg-black text-white">
       {/* Zoom Parallax Effect */}
-      <ZoomParallax images={cosmicImages} />
+      <ZoomParallax images={images} />
 
       {/* Features Grid */}
       <div className="relative py-20 px-8">
         <div className="max-w-6xl mx-auto">
+          {/* Features Heading - Hero Style */}
+          <div className="text-center mb-20">
+            <h2 className="mb-4">
+              <span className="block text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+                Unlock Your
+              </span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl font-normal italic leading-[1.1] mt-1 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Cosmic Potential
+              </span>
+            </h2>
+            <p className="text-sm md:text-base text-white/50 mt-6 max-w-2xl mx-auto font-light">
+              Discover powerful features designed to guide your celestial journey
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* AI Astrologer Feature */}
-            <div className="bg-deep-space/80 backdrop-blur-sm border border-soft-violet/20 rounded-2xl p-8 hover:border-soft-violet/40 transition-all duration-300 hover:shadow-lg hover:shadow-soft-violet/10">
-              <div className="w-16 h-16 bg-electric-purple/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div className="bg-black border border-white/10 rounded-none p-8 hover:border-white/30 transition-all duration-300">
+              <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-2xl">🔮</span>
               </div>
-              <h3 className="text-2xl font-bold text-electric-purple mb-4 text-center">AI Astrologer</h3>
-              <p className="text-gray-300 leading-relaxed text-center">
+              <h3 className="text-xl font-normal mb-4 text-center tracking-wide">AI Astrologer</h3>
+              <p className="text-sm text-gray-400 leading-relaxed text-center font-light">
                 Chat with our advanced AI astrologer for personalized readings and cosmic guidance tailored to your unique birth chart.
               </p>
             </div>
 
             {/* Zodiac Insights Feature */}
-            <div className="bg-deep-space/80 backdrop-blur-sm border border-magenta-pink/20 rounded-2xl p-8 hover:border-magenta-pink/40 transition-all duration-300 hover:shadow-lg hover:shadow-magenta-pink/10">
-              <div className="w-16 h-16 bg-magenta-pink/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div className="bg-black border border-white/10 rounded-none p-8 hover:border-white/30 transition-all duration-300">
+              <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-2xl">⭐</span>
               </div>
-              <h3 className="text-2xl font-bold text-magenta-pink mb-4 text-center">Zodiac Insights</h3>
-              <p className="text-gray-300 leading-relaxed text-center">
+              <h3 className="text-xl font-normal mb-4 text-center tracking-wide">Zodiac Insights</h3>
+              <p className="text-sm text-gray-400 leading-relaxed text-center font-light">
                 Explore detailed zodiac profiles, compatibility reports, and daily horoscopes with stunning cosmic visualizations.
               </p>
             </div>
 
             {/* Cosmic Journey Feature */}
-            <div className="bg-deep-space/80 backdrop-blur-sm border border-neon-blue/20 rounded-2xl p-8 hover:border-neon-blue/40 transition-all duration-300 hover:shadow-lg hover:shadow-neon-blue/10">
-              <div className="w-16 h-16 bg-neon-blue/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div className="bg-black border border-white/10 rounded-none p-8 hover:border-white/30 transition-all duration-300">
+              <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-2xl font-bold text-neon-blue mb-4 text-center">Cosmic Journey</h3>
-              <p className="text-gray-300 leading-relaxed text-center">
+              <h3 className="text-xl font-normal mb-4 text-center tracking-wide">Cosmic Journey</h3>
+              <p className="text-sm text-gray-400 leading-relaxed text-center font-light">
                 Embark on an interactive space adventure through animated star maps and immersive celestial experiences.
               </p>
             </div>
@@ -102,11 +96,11 @@ const Features = () => {
 
           {/* CTA Section */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
-            <button className="px-10 py-4 bg-gradient-to-r from-electric-purple to-magenta-pink hover:from-electric-purple/80 hover:to-magenta-pink/80 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-electric-purple/25 hover:scale-105 text-lg">
+            <button className="px-8 py-3 bg-white text-black hover:bg-gray-200 font-normal rounded-none transition-all duration-300 text-sm tracking-widest uppercase">
               Start Your Reading
             </button>
 
-            <button className="px-10 py-4 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-deep-space font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-neon-blue/25 text-lg">
+            <button className="px-8 py-3 border border-white text-white hover:bg-white hover:text-black font-normal rounded-none transition-all duration-300 text-sm tracking-widest uppercase">
               Explore Zodiac Signs
             </button>
           </div>

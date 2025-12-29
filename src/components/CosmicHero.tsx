@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
-import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
+// import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import Particles from '@/components/ui/particles';
-import { AuroraText } from '@/components/ui/aurora-text';
+// import { AuroraText } from '@/components/ui/aurora-text';
 
 const CosmicHero = () => {
   useEffect(() => {
@@ -33,36 +33,36 @@ const CosmicHero = () => {
 
       {/* Scroll Expansion Hero */}
       <div className='relative z-10'>
-        <ScrollExpandMedia
+        {/* <ScrollExpandMedia
           mediaType='video' // Now using your herovideo.mp4!
           mediaSrc='/herovideo.mp4' // Your cosmic video
           posterSrc='https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1920&auto=format&fit=crop' // Space poster for loading
           date='Discover Your Destiny'
           scrollToExpand='Scroll to Explore the Universe'
           textBlend={false}
-        >
-          {/* Content that appears after scroll expansion */}
-          <div className='max-w-6xl mx-auto text-center space-y-12'>
-            {/* Aurora Text Hero */}
-            <div className='space-y-6'>
-              <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter'>
-                Welcome to{' '}
-                <AuroraText
-                  colors={['#8b5cf6', '#ec4899', '#06b6d4', '#a855f7']}
-                  speed={1.5}
-                >
-                  ASTRONEXUS
-                </AuroraText>
-              </h1>
+        > */}
+        {/* Content that appears after scroll expansion */}
+        <div className='max-w-6xl mx-auto text-center space-y-12 py-20'>
+          {/* Aurora Text Hero */}
+          <div className='space-y-6'>
+            <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white'>
+              Welcome to ASTRONEXUS
+              {/* <AuroraText
+                colors={['#8b5cf6', '#ec4899', '#06b6d4', '#a855f7']}
+                speed={1.5}
+              >
+                ASTRONEXUS
+              </AuroraText> */}
+            </h1>
 
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-                Journey through the stars with our AI-powered astrology platform.
-                Discover personalized insights, explore zodiac mysteries, and chat with
-                our cosmic AI astrologer in this immersive space experience.
-              </p>
-            </div>
+            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+              Journey through the stars with our AI-powered astrology platform.
+              Discover personalized insights, explore zodiac mysteries, and chat with
+              our cosmic AI astrologer in this immersive space experience.
+            </p>
           </div>
-        </ScrollExpandMedia>
+        </div>
+        {/* </ScrollExpandMedia> */}
       </div>
     </div>
   );
